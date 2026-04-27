@@ -25,8 +25,11 @@
 					<version>3.5.5</version>
 					<configuration>
 						<suiteXmlFiles>
-							<suiteXmlFile>
+							<!--<suiteXmlFile>
 								master.xml
+							</suiteXmlFile> -->
+							<suiteXmlFile>
+								grid-docker.xml
 							</suiteXmlFile>
 						</suiteXmlFiles>
 					</configuration>
