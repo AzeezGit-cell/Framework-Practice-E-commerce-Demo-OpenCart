@@ -8,14 +8,14 @@
     <parameter name="os" value="windows"/>
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="test_cases.TC002_LoginPage">
+      <class name="test_cases.TC001_AccountRegistration">
         <methods>
           <include name="loadConfig"/>
           <include name="tearDown"/>
           <include name="setup"/>
-          <include name="LoginIntoAccount"/>
+          <include name="accountRegistration"/>
         </methods>
-      </class> <!-- test_cases.TC002_LoginPage -->
+      </class> <!-- test_cases.TC001_AccountRegistration -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

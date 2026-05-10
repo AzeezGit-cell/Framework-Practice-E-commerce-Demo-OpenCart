@@ -7,6 +7,7 @@ page_objetcts\Home_page.class
 utilities\ExtentTestManager.class
 utilities\ExcelUtility.class
 page_objetcts\My_Account_Page.class
+test_cases\TC004_Search_Product.class
 utilities\ExtentListener.class
 test_base\Base_class.class
 utilities\DataProviders.class

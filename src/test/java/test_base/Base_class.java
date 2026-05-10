@@ -46,7 +46,6 @@ public class Base_class {
         logger = LogManager.getLogger(this.getClass());
 
         if (br == null) br = "chrome";
-        if (os == null) os = "linux";
 
         String execEnv = p.getProperty("execution_env");
         String gridType = p.getProperty("grid_type");

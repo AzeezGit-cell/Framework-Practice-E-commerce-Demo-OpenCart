@@ -13,11 +13,11 @@
 		<parameter name="browser" value="chrome"></parameter>
 		<parameter name="os" value="windows"></parameter>
 		<classes>
-			<!--<class name="test_cases.TC001_AccountRegistration" />
-			<class name="test_cases.TC002_LoginPage" />
-			<class name="test_cases.TC003_LoginDDT" /> -->
+			<class name="test_cases.TC001_AccountRegistration" />
+			<!--<class name="test_cases.TC002_LoginPage" /> -->
+			<!--<class name="test_cases.TC003_LoginDDT" /> -->
 
-			<class name="test_cases.TC002_LoginPage" />
+			<!-- <class name="test_cases.TC002_LoginPage" /> -->
 		</classes>
 	</test> <!--
 	Test -->

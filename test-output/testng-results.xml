@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-27T21:16:35 IST" name="Suite" finished-at="2026-04-27T21:17:31 IST" duration-ms="56608">
+  <suite started-at="2026-05-10T15:17:32 IST" name="Suite" finished-at="2026-05-10T15:17:35 IST" duration-ms="3382">
     <groups>
       <group name="regression">
-        <method signature="TC002_LoginPage.LoginIntoAccount()[pri:0, instance:test_cases.TC002_LoginPage@3d6300e8]" name="LoginIntoAccount" class="test_cases.TC002_LoginPage"/>
+        <method signature="TC001_AccountRegistration.accountRegistration()[pri:0, instance:test_cases.TC001_AccountRegistration@3b366632]" name="accountRegistration" class="test_cases.TC001_AccountRegistration"/>
       </group> <!-- regression -->
-      <group name="smoke">
-        <method signature="TC002_LoginPage.LoginIntoAccount()[pri:0, instance:test_cases.TC002_LoginPage@3d6300e8]" name="LoginIntoAccount" class="test_cases.TC002_LoginPage"/>
-      </group> <!-- smoke -->
       <group name="master">
-        <method signature="TC002_LoginPage.LoginIntoAccount()[pri:0, instance:test_cases.TC002_LoginPage@3d6300e8]" name="LoginIntoAccount" class="test_cases.TC002_LoginPage"/>
+        <method signature="TC001_AccountRegistration.accountRegistration()[pri:0, instance:test_cases.TC001_AccountRegistration@3b366632]" name="accountRegistration" class="test_cases.TC001_AccountRegistration"/>
       </group> <!-- master -->
     </groups>
-    <test started-at="2026-04-27T21:16:35 IST" name="Test" finished-at="2026-04-27T21:17:31 IST" duration-ms="56608">
-      <class name="test_cases.TC002_LoginPage">
-        <test-method is-config="true" signature="loadConfig()[pri:0, instance:test_cases.TC002_LoginPage@3d6300e8]" started-at="2026-04-27T21:16:35 IST" name="loadConfig" finished-at="2026-04-27T21:16:35 IST" duration-ms="19" status="PASS">
+    <test started-at="2026-05-10T15:17:32 IST" name="Test" finished-at="2026-05-10T15:17:35 IST" duration-ms="3382">
+      <class name="test_cases.TC001_AccountRegistration">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:test_cases.TC001_AccountRegistration@3b366632]" started-at="2026-05-10T15:17:32 IST" name="loadConfig" finished-at="2026-05-10T15:17:32 IST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test_cases.TC002_LoginPage@3d6300e8]" started-at="2026-04-27T21:16:35 IST" name="setup" finished-at="2026-04-27T21:17:21 IST" duration-ms="45944" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test_cases.TC001_AccountRegistration@3b366632]" started-at="2026-05-10T15:17:32 IST" name="setup" finished-at="2026-05-10T15:17:33 IST" duration-ms="1719" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -36,53 +33,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="LoginIntoAccount()[pri:0, instance:test_cases.TC002_LoginPage@3d6300e8]" started-at="2026-04-27T21:17:21 IST" name="LoginIntoAccount" finished-at="2026-04-27T21:17:31 IST" duration-ms="10427" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.fail(Assert.java:116)
-at test_cases.TC002_LoginPage.LoginIntoAccount(TC002_LoginPage.java:33)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="accountRegistration()[pri:0, instance:test_cases.TC001_AccountRegistration@3b366632]" started-at="2026-05-10T15:17:33 IST" name="accountRegistration" finished-at="2026-05-10T15:17:35 IST" duration-ms="1436" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginIntoAccount -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test_cases.TC002_LoginPage@3d6300e8]" started-at="2026-04-27T21:17:31 IST" name="tearDown" finished-at="2026-04-27T21:17:31 IST" duration-ms="151" status="PASS">
+        </test-method> <!-- accountRegistration -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test_cases.TC001_AccountRegistration@3b366632]" started-at="2026-05-10T15:17:35 IST" name="tearDown" finished-at="2026-05-10T15:17:35 IST" duration-ms="177" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- test_cases.TC002_LoginPage -->
+      </class> <!-- test_cases.TC001_AccountRegistration -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

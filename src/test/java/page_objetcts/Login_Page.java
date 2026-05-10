@@ -9,12 +9,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Login_Page extends Base_Page {
+	
+	int a = 10;
 
 	public Login_Page(WebDriver driver) {
 		super(driver);
 	}
 
-	@FindBy(name = "email")
+	@FindBy(name  = "email")
 	WebElement txtEmail;
 
 	@FindBy(name = "password")

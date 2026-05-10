@@ -1,9 +1,123 @@
-2026-04-28 00:40:22 DEBUG TestNG - suiteXmlPath: "C:\Users\bala karthikeyan\eclipse-workspace\open_cart_project\master.xml"
-2026-04-28 00:40:25 INFO  TC002_LoginPage - TC002 started
-2026-04-28 00:40:26 INFO  TC002_LoginPage - TC002 completed
-2026-04-28 00:41:52 DEBUG TestNG - suiteXmlPath: "C:\Users\bala karthikeyan\eclipse-workspace\open_cart_project\master.xml"
-2026-04-28 00:41:54 INFO  TC002_LoginPage - TC002 started
-2026-04-28 00:41:55 INFO  TC002_LoginPage - TC002 completed
-2026-04-28 00:44:16 DEBUG TestNG - suiteXmlPath: "C:\Users\bala karthikeyan\eclipse-workspace\open_cart_project\master.xml"
-2026-04-28 00:44:19 INFO  TC002_LoginPage - TC002 started
-2026-04-28 00:44:20 INFO  TC002_LoginPage - TC002 completed
+2026-05-10 00:30:49 DEBUG TestNG - suiteXmlPath: "C:\Users\bala karthikeyan\eclipse-workspace\open_cart_project\master.xml"
+2026-05-10 00:30:50 INFO  Utils - [TestNG] Running:
+  C:\Users\bala karthikeyan\eclipse-workspace\open_cart_project\master.xml
+
+2026-05-10 00:30:53 INFO  TC002_LoginPage - TC002 started
+2026-05-10 00:33:07 DEBUG TestNG - suiteXmlPath: "C:\Users\bala karthikeyan\eclipse-workspace\open_cart_project\master.xml"
+2026-05-10 00:33:07 INFO  Utils - [TestNG] Running:
+  C:\Users\bala karthikeyan\eclipse-workspace\open_cart_project\master.xml
+
+2026-05-10 00:33:09 INFO  TC002_LoginPage - TC002 started
+2026-05-10 00:36:16 DEBUG TestNG - suiteXmlPath: "C:\Users\bala karthikeyan\eclipse-workspace\open_cart_project\master.xml"
+2026-05-10 00:36:16 INFO  Utils - [TestNG] Running:
+  C:\Users\bala karthikeyan\eclipse-workspace\open_cart_project\master.xml
+
+2026-05-10 00:36:18 INFO  TC001_AccountRegistration - Testcase_1 started
+2026-05-10 00:36:18 INFO  TC001_AccountRegistration - clicked on myAccount
+2026-05-10 00:36:18 INFO  TC001_AccountRegistration - clicked on register
+2026-05-10 00:36:18 INFO  TC001_AccountRegistration - providing details
+2026-05-10 12:36:49 DEBUG TestNG - suiteXmlPath: "C:\Users\bala karthikeyan\eclipse-workspace\open_cart_project\master.xml"
+2026-05-10 12:36:54 INFO  TC001_AccountRegistration - Testcase_1 started
+2026-05-10 12:36:54 INFO  TC001_AccountRegistration - clicked on myAccount
+2026-05-10 12:36:55 INFO  TC001_AccountRegistration - clicked on register
+2026-05-10 12:36:55 INFO  TC001_AccountRegistration - providing details
+2026-05-10 12:49:57 DEBUG TestNG - suiteXmlPath: "C:\Users\bala karthikeyan\eclipse-workspace\open_cart_project\master.xml"
+2026-05-10 12:50:00 INFO  TC001_AccountRegistration - Testcase_1 started
+2026-05-10 12:50:01 INFO  TC001_AccountRegistration - clicked on myAccount
+2026-05-10 12:50:02 INFO  TC001_AccountRegistration - clicked on register
+2026-05-10 12:50:02 INFO  TC001_AccountRegistration - providing details
+2026-05-10 12:59:28 DEBUG TestNG - suiteXmlPath: "C:\Users\bala karthikeyan\eclipse-workspace\open_cart_project\master.xml"
+2026-05-10 12:59:28 INFO  Utils - [TestNG] Running:
+  C:\Users\bala karthikeyan\eclipse-workspace\open_cart_project\master.xml
+
+2026-05-10 12:59:31 INFO  TC001_AccountRegistration - Testcase_1 started
+2026-05-10 12:59:32 INFO  TC001_AccountRegistration - clicked on myAccount
+2026-05-10 12:59:32 INFO  TC001_AccountRegistration - clicked on register
+2026-05-10 12:59:32 INFO  TC001_AccountRegistration - providing details
+2026-05-10 14:54:51 DEBUG TestNG - suiteXmlPath: "C:\Users\bala karthikeyan\eclipse-workspace\open_cart_project\master.xml"
+2026-05-10 14:54:52 INFO  Utils - [TestNG] Running:
+  C:\Users\bala karthikeyan\eclipse-workspace\open_cart_project\master.xml
+
+2026-05-10 14:54:54 INFO  TC001_AccountRegistration - Testcase_1 started
+2026-05-10 14:54:54 INFO  TC001_AccountRegistration - clicked on myAccount
+2026-05-10 14:54:54 INFO  TC001_AccountRegistration - clicked on register
+2026-05-10 14:54:54 INFO  TC001_AccountRegistration - providing details
+2026-05-10 14:54:55 INFO  TC001_AccountRegistration - validating expected message
+2026-05-10 14:55:05 ERROR TC001_AccountRegistration - Test failed
+2026-05-10 14:55:05 DEBUG TC001_AccountRegistration - Debugg logs
+2026-05-10 14:59:01 DEBUG TestNG - suiteXmlPath: "C:\Users\bala karthikeyan\eclipse-workspace\open_cart_project\master.xml"
+2026-05-10 14:59:01 INFO  Utils - [TestNG] Running:
+  C:\Users\bala karthikeyan\eclipse-workspace\open_cart_project\master.xml
+
+2026-05-10 14:59:03 INFO  TC001_AccountRegistration - Testcase_1 started
+2026-05-10 14:59:03 INFO  TC001_AccountRegistration - clicked on myAccount
+2026-05-10 14:59:04 INFO  TC001_AccountRegistration - clicked on register
+2026-05-10 14:59:04 INFO  TC001_AccountRegistration - providing details
+2026-05-10 14:59:04 INFO  TC001_AccountRegistration - firstname
+2026-05-10 14:59:04 INFO  TC001_AccountRegistration - lastname
+2026-05-10 14:59:04 INFO  TC001_AccountRegistration - Email
+2026-05-10 14:59:04 INFO  TC001_AccountRegistration - password
+2026-05-10 14:59:04 INFO  TC001_AccountRegistration - checkpolicy
+2026-05-10 14:59:04 INFO  TC001_AccountRegistration - continue
+2026-05-10 14:59:04 INFO  TC001_AccountRegistration - validating expected message
+2026-05-10 14:59:14 ERROR TC001_AccountRegistration - Test failed
+2026-05-10 14:59:14 DEBUG TC001_AccountRegistration - Debugg logs
+2026-05-10 15:02:55 DEBUG TestNG - suiteXmlPath: "C:\Users\bala karthikeyan\eclipse-workspace\open_cart_project\master.xml"
+2026-05-10 15:02:55 INFO  Utils - [TestNG] Running:
+  C:\Users\bala karthikeyan\eclipse-workspace\open_cart_project\master.xml
+
+2026-05-10 15:02:57 INFO  TC001_AccountRegistration - Testcase_1 started
+2026-05-10 15:02:57 INFO  TC001_AccountRegistration - clicked on myAccount
+2026-05-10 15:02:57 INFO  TC001_AccountRegistration - clicked on register
+2026-05-10 15:02:57 INFO  TC001_AccountRegistration - providing details
+2026-05-10 15:02:57 INFO  TC001_AccountRegistration - firstname
+2026-05-10 15:02:57 INFO  TC001_AccountRegistration - lastname
+2026-05-10 15:02:57 INFO  TC001_AccountRegistration - Email
+2026-05-10 15:02:58 INFO  TC001_AccountRegistration - password
+2026-05-10 15:02:58 INFO  TC001_AccountRegistration - checkpolicy
+2026-05-10 15:02:58 INFO  TC001_AccountRegistration - continue
+2026-05-10 15:07:39 DEBUG TestNG - suiteXmlPath: "C:\Users\bala karthikeyan\eclipse-workspace\open_cart_project\master.xml"
+2026-05-10 15:07:40 INFO  Utils - [TestNG] Running:
+  C:\Users\bala karthikeyan\eclipse-workspace\open_cart_project\master.xml
+
+2026-05-10 15:07:41 INFO  TC001_AccountRegistration - Testcase_1 started
+2026-05-10 15:07:42 INFO  TC001_AccountRegistration - clicked on myAccount
+2026-05-10 15:07:42 INFO  TC001_AccountRegistration - clicked on register
+2026-05-10 15:07:42 INFO  TC001_AccountRegistration - providing details
+2026-05-10 15:07:42 INFO  TC001_AccountRegistration - firstname
+2026-05-10 15:07:42 INFO  TC001_AccountRegistration - lastname
+2026-05-10 15:07:42 INFO  TC001_AccountRegistration - Email
+2026-05-10 15:07:42 INFO  TC001_AccountRegistration - password
+2026-05-10 15:07:42 INFO  TC001_AccountRegistration - checkpolicy
+2026-05-10 15:07:42 INFO  TC001_AccountRegistration - continue
+2026-05-10 15:10:42 DEBUG TestNG - suiteXmlPath: "C:\Users\bala karthikeyan\eclipse-workspace\open_cart_project\master.xml"
+2026-05-10 15:10:42 INFO  Utils - [TestNG] Running:
+  C:\Users\bala karthikeyan\eclipse-workspace\open_cart_project\master.xml
+
+2026-05-10 15:10:44 INFO  TC001_AccountRegistration - Testcase_1 started
+2026-05-10 15:10:44 INFO  TC001_AccountRegistration - clicked on myAccount
+2026-05-10 15:10:44 INFO  TC001_AccountRegistration - clicked on register
+2026-05-10 15:10:44 INFO  TC001_AccountRegistration - providing details
+2026-05-10 15:10:44 INFO  TC001_AccountRegistration - firstname
+2026-05-10 15:10:44 INFO  TC001_AccountRegistration - lastname
+2026-05-10 15:10:44 INFO  TC001_AccountRegistration - Email
+2026-05-10 15:10:44 INFO  TC001_AccountRegistration - password
+2026-05-10 15:10:45 INFO  TC001_AccountRegistration - checkpolicy
+2026-05-10 15:10:45 INFO  TC001_AccountRegistration - continue
+2026-05-10 15:17:31 DEBUG TestNG - suiteXmlPath: "C:\Users\bala karthikeyan\eclipse-workspace\open_cart_project\master.xml"
+2026-05-10 15:17:32 INFO  Utils - [TestNG] Running:
+  C:\Users\bala karthikeyan\eclipse-workspace\open_cart_project\master.xml
+
+2026-05-10 15:17:33 INFO  TC001_AccountRegistration - Testcase_1 started
+2026-05-10 15:17:34 INFO  TC001_AccountRegistration - clicked on myAccount
+2026-05-10 15:17:34 INFO  TC001_AccountRegistration - clicked on register
+2026-05-10 15:17:34 INFO  TC001_AccountRegistration - providing details
+2026-05-10 15:17:34 INFO  TC001_AccountRegistration - firstname
+2026-05-10 15:17:34 INFO  TC001_AccountRegistration - lastname
+2026-05-10 15:17:34 INFO  TC001_AccountRegistration - Email
+2026-05-10 15:17:34 INFO  TC001_AccountRegistration - password
+2026-05-10 15:17:34 INFO  TC001_AccountRegistration - checkpolicy
+2026-05-10 15:17:34 INFO  TC001_AccountRegistration - continue
+2026-05-10 15:17:34 INFO  TC001_AccountRegistration - validating expected message
+2026-05-10 15:17:35 INFO  TC001_AccountRegistration - message successfull
+2026-05-10 15:17:35 INFO  TC001_AccountRegistration - Execution finished
