@@ -1,6 +1,7 @@
 package test_cases;
 
 import org.testng.Assert;
+
 import org.testng.annotations.Test;
 
 import page_objetcts.Home_page;
@@ -10,7 +11,7 @@ import test_base.Base_class;
 
 public class TC002_LoginPage extends Base_class {
 
-	@Test(groups = { "smoke", "regression", "master" })
+	@Test(groups = { "smoke", "regression", "master" }, invocationCount = 5)
 	public void LoginIntoAccount() {
 
 		logger.info("TC002 started");

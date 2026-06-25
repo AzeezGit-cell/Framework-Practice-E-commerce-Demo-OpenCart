@@ -7,6 +7,7 @@
 
 	<listeners>
 		<listener class-name="utilities.ExtentListener" />
+		<listener class-name="utilities.AnnotationTransformer"/>
 	</listeners>
 	<test thread-count="5" name="Test">
 

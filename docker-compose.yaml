@@ -3,6 +3,7 @@ services:
   selenium-hub:
     image: selenium/hub:4.43.0
     container_name: selenium-hub
+    restart: unless-stopped
     networks:
       - selenium-grid
     ports:
@@ -13,78 +14,50 @@ services:
   chrome:
     image: selenium/node-chrome:4.43.0
     container_name: chrome-node
+    restart: unless-stopped
     shm_size: 2gb
-    networks:
-      - selenium-grid
     depends_on:
       - selenium-hub
-    environment:
-      - SE_EVENT_BUS_HOST=selenium-hub
-      - SE_EVENT_BUS_PUBLISH_PORT=4442
-      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-      - SE_NODE_MAX_SESSIONS=10
-      - SE_NODE_OVERRIDE_MAX_SESSIONS=true
-
-  edge:
-    image: selenium/node-edge:4.43.0
-    container_name: edge-node
-    shm_size: 2gb
     networks:
       - selenium-grid
-    depends_on:
-      - selenium-hub
     environment:
-      - SE_EVENT_BUS_HOST=selenium-hub
-      - SE_EVENT_BUS_PUBLISH_PORT=4442
-      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-      - SE_NODE_MAX_SESSIONS=10
-      - SE_NODE_OVERRIDE_MAX_SESSIONS=true
+      SE_EVENT_BUS_HOST: selenium-hub
+      SE_EVENT_BUS_PUBLISH_PORT: 4442
+      SE_EVENT_BUS_SUBSCRIBE_PORT: 4443
+      SE_NODE_MAX_SESSIONS: 10
+      SE_NODE_OVERRIDE_MAX_SESSIONS: "true"
 
   firefox:
     image: selenium/node-firefox:4.43.0
     container_name: firefox-node
+    restart: unless-stopped
     shm_size: 2gb
-    networks:
-      - selenium-grid
     depends_on:
       - selenium-hub
-    environment:
-      - SE_EVENT_BUS_HOST=selenium-hub
-      - SE_EVENT_BUS_PUBLISH_PORT=4442
-      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-      - SE_NODE_MAX_SESSIONS=10
-      - SE_NODE_OVERRIDE_MAX_SESSIONS=true
-
-  opencart-db:
-    image: mysql:8.0
-    container_name: opencart-db
     networks:
       - selenium-grid
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: opencart
-      MYSQL_USER: opencart
-      MYSQL_PASSWORD: opencart123
-    volumes:
-      - opencart-db-data:/var/lib/mysql
+      SE_EVENT_BUS_HOST: selenium-hub
+      SE_EVENT_BUS_PUBLISH_PORT: 4442
+      SE_EVENT_BUS_SUBSCRIBE_PORT: 4443
+      SE_NODE_MAX_SESSIONS: 10
+      SE_NODE_OVERRIDE_MAX_SESSIONS: "true"
 
-  opencart:
-    image: typo3/opencart:latest
-    container_name: opencart
-    networks:
-      - selenium-grid
-    ports:
-      - "80:80"
+  edge:
+    image: selenium/node-edge:4.43.0
+    container_name: edge-node
+    restart: unless-stopped
+    shm_size: 2gb
     depends_on:
-      - opencart-db
+      - selenium-hub
+    networks:
+      - selenium-grid
     environment:
-      OPENCART_DB_HOST: opencart-db
-      OPENCART_DB_USER: opencart
-      OPENCART_DB_PASSWORD: opencart123
-      OPENCART_DB_DATABASE: opencart
-
-volumes:
-  opencart-db-data:
+      SE_EVENT_BUS_HOST: selenium-hub
+      SE_EVENT_BUS_PUBLISH_PORT: 4442
+      SE_EVENT_BUS_SUBSCRIBE_PORT: 4443
+      SE_NODE_MAX_SESSIONS: 10
+      SE_NODE_OVERRIDE_MAX_SESSIONS: "true"
 
 networks:
   selenium-grid:
