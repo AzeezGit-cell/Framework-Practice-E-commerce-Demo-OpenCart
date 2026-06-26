@@ -22,7 +22,7 @@ public class Login_Page extends Base_Page {
 	@FindBy(name = "password")
 	WebElement txtPassword;
 
-	@FindBy(xpath = "//input[@type='submit']")
+	@FindBy(xpath = "//button[normalize-space()='Login']")
 	WebElement btnLogin;
 
 	public void sendEmail(String email) {

@@ -32,12 +32,12 @@ public class TC001_AccountRegistration extends Base_class {
 			ac.setLastName(randomString().toUpperCase());
 			logger.info("Email");
 			ac.setEmail(randomString() + "@gmail.com");
-			// ac.setTelePhone(randomNumber());
+			//ac.setTelePhone(randomNumber());
 
 			String password = randomAlphaNumeric();
 			logger.info("password");
 			ac.setPassword(password);
-			// ac.confirmPassword(password);
+			//ac.confirmPassword(password);
 
 			logger.info("checkpolicy");
 
@@ -57,9 +57,12 @@ public class TC001_AccountRegistration extends Base_class {
 				Assert.assertTrue(false);
 			}
 			logger.info("message successfull");
-		} catch (Exception e) {
+		} catch(Exception e){
 
-			Assert.fail();
+		    e.printStackTrace();
+
+		    Assert.fail(e.getMessage());
+
 		}
 		logger.info("Execution finished");
 

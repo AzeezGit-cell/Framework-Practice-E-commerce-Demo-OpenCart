@@ -5,85 +5,81 @@ import java.io.File;
 import java.lang.reflect.Field;
 import java.util.Arrays;
 
-import org.openqa.selenium.*;
-import org.testng.*;
+import org.openqa.selenium.WebDriver;
 
-import com.aventstack.extentreports.*;
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
 
-import test_base.Base_class;
+public class ExtentListener implements ITestListener {
 
-public class ExtentListener extends Base_class implements ITestListener {
+	private final ExtentReports extent = ExtentManager.getInstance();
 
-	ExtentReports extent = ExtentManager.getInstance();
-
-	// ================== SUITE START ==================
 	@Override
 	public void onStart(ITestContext context) {
 
 		System.out.println("===== Test Execution Started =====");
 
-		extent.setSystemInfo("Suite Name", context.getSuite().getName());
-		extent.setSystemInfo("Test Name", context.getName());
+		extent.setSystemInfo("Suite", context.getSuite().getName());
+		extent.setSystemInfo("Test", context.getName());
 		extent.setSystemInfo("Groups", Arrays.toString(context.getIncludedGroups()));
 	}
 
-	// ================== TEST START ==================
 	@Override
 	public void onTestStart(ITestResult result) {
 
-		ExtentTest test = extent.createTest(result.getName());
+		ExtentTest test = extent.createTest(result.getMethod().getMethodName());
 
-		// Groups
-		String[] groups = result.getMethod().getGroups();
-		if (groups.length > 0) {
-			test.assignCategory(groups);
-		}
+		if (result.getMethod().getGroups().length > 0)
+			test.assignCategory(result.getMethod().getGroups());
 
 		ExtentTestManager.setTest(test);
 
-		ExtentTestManager.getTest().log(Status.INFO, "Test Started at: " + getTimeStamp());
+		ExtentTestManager.getTest().log(Status.INFO, "Started : " + DateUtil.getTimeStamp());
 	}
 
-	// ================== PASS ==================
 	@Override
 	public void onTestSuccess(ITestResult result) {
 
-		ExtentTestManager.getTest().log(Status.PASS, "Test Passed at: " + getTimeStamp());
+		ExtentTestManager.getTest().log(Status.PASS, "Passed : " + DateUtil.getTimeStamp());
 	}
 
-	// ================== FAILURE ==================
 	@Override
 	public void onTestFailure(ITestResult result) {
 
-		ExtentTestManager.getTest().log(Status.FAIL, "Test Failed at: " + getTimeStamp());
+		ExtentTestManager.getTest().log(Status.FAIL, "Failed : " + DateUtil.getTimeStamp());
 
-		ExtentTestManager.getTest().log(Status.FAIL, result.getThrowable());
+		ExtentTestManager.getTest().fail(result.getThrowable());
 
 		try {
+
 			WebDriver driver = getDriver(result);
 
 			if (driver != null) {
-				String path = captureScreenshot(driver, result.getName());
 
-				// ✅ Screenshot embedded (clickable)
-				ExtentTestManager.getTest().fail("Screenshot",
-						MediaEntityBuilder.createScreenCaptureFromPath(path).build());
+				String screenshot = ScreenshotUtil.captureScreenshot(driver, result.getMethod().getMethodName());
+
+				ExtentTestManager.getTest().fail("Failure Screenshot",
+						MediaEntityBuilder.createScreenCaptureFromPath(screenshot).build());
 			}
 
 		} catch (Exception e) {
+
 			e.printStackTrace();
 		}
 	}
 
-	// ================== SKIPPED ==================
 	@Override
 	public void onTestSkipped(ITestResult result) {
 
-		ExtentTestManager.getTest().log(Status.SKIP, "Test Skipped at: " + getTimeStamp());
+		ExtentTestManager.getTest().log(Status.SKIP, "Skipped : " + DateUtil.getTimeStamp());
 	}
 
-	// ================== SUITE END ==================
 	@Override
 	public void onFinish(ITestContext context) {
 
@@ -91,34 +87,45 @@ public class ExtentListener extends Base_class implements ITestListener {
 
 		extent.flush();
 
-		// ✅ Auto open report
 		try {
-			File reportFile = new File(ExtentManager.reportPath);
-			Desktop.getDesktop().browse(reportFile.toURI());
+
+			File report = new File(ExtentManager.reportPath);
+
+			if (report.exists())
+				Desktop.getDesktop().browse(report.toURI());
+
 		} catch (Exception e) {
+
 			e.printStackTrace();
 		}
 	}
 
-	// ================== DRIVER FETCH ==================
+	// ================ Driver ===================
+
 	private WebDriver getDriver(ITestResult result) {
 
-		Object testInstance = result.getInstance();
-		Class<?> clazz = result.getTestClass().getRealClass();
+		Object currentObject = result.getInstance();
+
+		Class<?> clazz = currentObject.getClass();
 
 		while (clazz != null) {
+
 			try {
+
 				Field field = clazz.getDeclaredField("driver");
+
 				field.setAccessible(true);
-				return (WebDriver) field.get(testInstance);
-			} catch (Exception e) {
+
+				return (WebDriver) field.get(currentObject);
+
+			}
+
+			catch (Exception e) {
+
 				clazz = clazz.getSuperclass();
 			}
 		}
 
 		return null;
 	}
-
-	// ================== SCREENSHOT ==================
-
 }

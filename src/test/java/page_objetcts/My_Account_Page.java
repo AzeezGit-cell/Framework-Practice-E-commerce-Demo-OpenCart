@@ -14,19 +14,21 @@ public class My_Account_Page extends Base_Page {
 		super(driver);
 	}
 
-	@FindBy(xpath = "//h2[text()='My Account']")
+	@FindBy(xpath = "//h1[text()='My Account']")
 	WebElement msg;
 
 	@FindBy(xpath = "//div[@class = 'list-group']//a[text()='Logout']")
 	WebElement btnLogout;
 
 	public boolean isMyAccountHeadingDisplayed() {
+		
 		try {
 			new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(msg));
 			return true;
 		} catch (Exception e) {
 			return false;
 		}
+
 	}
 
 	public void clickLogout() {

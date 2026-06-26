@@ -1,6 +1,29 @@
+# Maven
 target/
+
+# Eclipse
 .settings/
 .classpath
 .project
-.idea/
+
+# TestNG Reports
 test-output/
+
+# Extent Reports
+reports/
+
+# Screenshots
+screenshots/
+
+# Logs
+logs/
+*.log
+*.log.gz
+
+# Compiled Java Files
+*.class
+
+# Temporary Files
+*.tmp
+Thumbs.db
+.DS_Store
